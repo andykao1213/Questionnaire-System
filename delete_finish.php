@@ -7,7 +7,7 @@ $id = $_POST['id'];
 if($_SESSION['username'] != null)
 {
         //刪除資料庫資料語法
-        $sql = "delete from member_table where username='$id'";
+        $sql = "delete from member_member_table where username='$id'";
         if(mysql_query($sql))
         {
                 echo '刪除成功!';

@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
-	include("mysql_connect.inc.php")
+	include("mysql_connect.inc.php");
 	echo '<a href="logout.php">登出</a>  <br><br>';
 
 	//判斷有無權限
@@ -11,10 +11,10 @@
         echo '<a href="delete.php">刪除</a>  <br><br>';
 
 		//顯示資料庫裡的所有會員
-		$sql = "SELECT * FROM member_table";
+		$sql = "SELECT * FROM member_member_table";
 		$result = mysql_query($sql);
 		while ($row = mysql_fetch_row($result)) {
-			 echo "$row[0] - 名字(帳號)：$row[1], " . "電話：$row[3], 地址：$row[4], 備註：$row[5]<br>";
+			 echo '- 名字(帳號)：'.$row[0].', 電話：'.$row[2].', 地址：'.$row[3].', 備註：'.$row[4].'<br>';
 		}
 	} else{
 		echo "您無權限觀!";

@@ -12,7 +12,7 @@
 	$other = $_POST['other'];
 
 	if($_SESSION['username'] != null && $pw != null && $pw2 != null && $pw == $pw2){
-		$sql = "update member_table set password=$pw, telephone=$telephone, address=$address, other=$other where username='$id'";
+		$sql = "update member_member_table set password=$pw, telephone=$telephone, address=$address, other=$other where username='$id'";
         if(mysql_query($sql))
         {
                 echo '修改成功!';

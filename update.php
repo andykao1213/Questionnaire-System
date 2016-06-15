@@ -5,7 +5,7 @@
 
 	if($_SESSION['username'] != null){
 		$id = $_SESSION['username'];
-		$sql = "SELECT * FROM member_table shere username = '$id'";
+		$sql = "SELECT * FROM member_member_table shere username = '$id'";
 		$result = mysql_query($sql);
 		$row = mysql_fetch_row($result);
 
